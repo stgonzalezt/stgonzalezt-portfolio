@@ -6,9 +6,10 @@
   text-align: center;
   height: 100dvh;
   min-height: 500px;
-  width: 100em;
-  background-image: url("../../assets/background-page.png");
-  background-size: cover;
+
+  .hero {
+    max-width: 200px;
+  }
 
   span {
     display: flex;
@@ -58,8 +59,7 @@
 
 .colorMode {
   position: absolute;
-  top: 5%;
-  right: 5%;
+  right: 0;
   width: 25px;
 }
 
@@ -67,14 +67,14 @@
   cursor: pointer;
 }
 
+.description {
+  max-width: 24ch;
+}
+
 .info {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.description {
-  max-width: 50ch;
 }
 
 @media (width >= 800px) {

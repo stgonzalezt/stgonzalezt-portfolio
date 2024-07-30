@@ -10,7 +10,6 @@ import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
 import CV from "../../assets/cv-stgonzalezt.pdf";
 import { useTheme } from "../common/ThemeContext.jsx";
-import backgroudImage from "../../assets/background-page.png";
 
 function Home() {
   const { theme, toggleTheme } = useTheme();
@@ -22,24 +21,26 @@ function Home() {
 
   return (
     <section id="hero" className={styles.container}>
-      <section id="iconContainer" className={styles.iconContainer}>
-        <div className={styles.aContainer}>
-          <img
-            className={styles.colorMode}
-            src={themeIcon}
-            alt="Color mode icon"
-            onClick={toggleTheme}></img>
-        </div>
-      </section>
       <div className={styles.colorModeContainer}>
         <img
           src={heroImg}
           className={styles.hero}
-          alt="Profile picture of Harris Johnsen"></img>
+          alt="Profile picture of Harris Johnsen"
+        />
+        <img
+          className={styles.colorMode}
+          src={themeIcon}
+          alt="Color mode icon"
+          onClick={toggleTheme}
+        />
       </div>
       <div className={styles.info}>
-        <h1>Teresita González</h1>
-        <h2>Software and Roblox Developer</h2>
+        <h1>
+          Harris
+          <br />
+          Johnsen
+        </h1>
+        <h2>Frontend Developer</h2>
         <span>
           <a href="https://twitter.com/" target="_blank">
             <img src={twitterIcon} alt="Twitter icon" />
@@ -56,7 +57,7 @@ function Home() {
           businesses.
         </p>
         <a href={CV} download>
-          <button className="hover">CV</button>
+          <button className="hover">Resume</button>
         </a>
       </div>
     </section>
